@@ -1,0 +1,5 @@
+rootProject.name = "AuthenticationFormExample"
+include ':app'
+include ':common'
+include ':auth'
+include ':home_screen'
