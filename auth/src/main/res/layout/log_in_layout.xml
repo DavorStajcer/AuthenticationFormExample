@@ -4,12 +4,11 @@
     <data>
         <variable
             name="authButtonListener"
-            type="com.example.auth.callbacks.IAuthButtonListener" />
+            type="com.example.auth.presentation.log_in.callbacks.IAuthButtonListener" />
     </data>
 
     <util.BacgroundLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/auth_background"
@@ -20,6 +19,7 @@
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Theme.AuthTextInputField"
+            android:id="@+id/emailTextInputLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toTopOf="@+id/passwordTextInputLayout"
@@ -27,8 +27,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginBottom="20dp"
             app:startIconDrawable="@drawable/email"
-            android:hint="Email">
+            app:errorIconTint="@color/transparent"
+            android:hint="@string/email">
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 />
@@ -44,8 +46,10 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:startIconDrawable="@drawable/password"
-            android:hint="Password">
+            app:errorIconTint="@color/transparent"
+            android:hint="@string/password">
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passwordEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 />
@@ -61,7 +65,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:background="@drawable/auth_button"
-            android:text="Log in"
+            android:enabled="false"
+            android:text="@string/logInButton"
             android:onClick="@{ () -> authButtonListener.onAuthButtonClicked()}"
             />
         <com.google.android.material.button.MaterialButton
@@ -72,7 +77,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:text="Sing up instead"
+            android:text="@string/signUpInstead"
             android:layout_marginBottom="50dp"
             />
     </util.BacgroundLayout>

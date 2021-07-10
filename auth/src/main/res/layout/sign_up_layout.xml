@@ -1,25 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
+
+    <data>
+        <variable
+            name="authButtonListener"
+            type="com.example.auth.presentation.log_in.callbacks.IAuthButtonListener" />
+    </data>
+
     <util.BacgroundLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@color/auth_background"
         android:paddingLeft="50dp"
         android:paddingRight="50dp">
 
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/usernameTextInputField"
             style="@style/Theme.AuthTextInputField"
+            android:id="@+id/usernameTextInputLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="@+id/emailTextInputLayout"
+            app:layout_constraintBottom_toTopOf="@+id/emailSingUpTextInputLayout"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:startIconDrawable="@drawable/email"
-            android:hint="Email">
+            android:hint="@string/username">
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -27,15 +34,15 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/emailTextInputLayout"
+            android:id="@+id/emailSingUpTextInputLayout"
             style="@style/Theme.AuthTextInputField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="@+id/passwordTextInputLayout"
+            app:layout_constraintBottom_toTopOf="@+id/passwordSingUpTextInputLayout"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:startIconDrawable="@drawable/email"
-            android:hint="Email">
+            android:hint="@string/email">
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -44,7 +51,7 @@
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Theme.AuthTextInputField"
-            android:id="@+id/passwordTextInputLayout"
+            android:id="@+id/passwordSingUpTextInputLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
@@ -52,7 +59,7 @@
             app:layout_constraintBottom_toTopOf="@+id/confirmPasswordTextInputLayout"
 
             app:startIconDrawable="@drawable/password"
-            android:hint="Password">
+            android:hint="@string/password">
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -69,7 +76,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:startIconDrawable="@drawable/password"
-            android:hint="Password">
+            android:hint="@string/confirmPassword">
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -86,7 +93,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:background="@drawable/auth_button"
-            android:text="Sign up" />
+            android:text="@string/signUpButton"
+            android:enabled="false"/>
 
         <com.google.android.material.button.MaterialButton
             style="@style/AuthChangeAuthMethod"
@@ -96,7 +104,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:text="Log in instead"
+            android:text="@string/logInInstead"
             android:layout_marginBottom="50dp"
             />
     </util.BacgroundLayout>

@@ -48,6 +48,8 @@ dependencies {
     api firebase_firestore
     api navigation_fragment
     api navigation_ui
+    api rxJava
+    api rxAndroid
     //Testing
     api junit
     api androidx_junit

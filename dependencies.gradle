@@ -53,6 +53,8 @@ ext {
     rxKotlin = "io.reactivex.rxjava3:rxkotlin:$rxKotlin_v"
     rxBindings_v = '4.0.0'
     rxBindings = "com.jakewharton.rxbinding4:rxbinding:$rxBindings_v"
+    rxBindingsV4 = "com.jakewharton.rxbinding:rxbinding-support-v4:$rxBindings_v"
+
     //Glide
     glide_v = '4.11.0'
     glide = "com.github.bumptech.glide:glide:$glide_v"

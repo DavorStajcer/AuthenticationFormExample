@@ -1,0 +1,10 @@
+<resources>
+    <string name="logInButton">LOG IN</string>
+    <string name="signUpButton">SIGN UP</string>
+    <string name="logInInstead">Log in instead</string>
+    <string name="signUpInstead">Sign up instead</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirmPassword">Confrim password</string>
+</resources>
